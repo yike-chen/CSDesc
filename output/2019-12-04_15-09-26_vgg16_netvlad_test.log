@@ -1,0 +1,97 @@
+2019-12-04 15:09:26,397 Restored flags: ['--optim', 'SGD', '--lr', '0.0001', '--lrStep', '5', '--lrGamma', '0.5', '--weightDecay', '0.001', '--momentum', '0.9', '--seed', '123', '--runsPath', '/home/annora/NetVLAD/output/runs/', '--savePath', '/home/annora/NetVLAD/output/runs/2019-12-02-10-15-37_vgg16_netvlad/checkpoints', '--patience', '10', '--arch', 'vgg16', '--pooling', 'netvlad', '--num_clusters', '64', '--margin', '0.1']
+2019-12-04 15:09:26,399 Namespace(arch='vgg16', batchSize=2, cacheBatchSize=24, cachePath='/home/annora/NetVLAD/output/', cacheRefreshRate=1000, ckpt='best', contilearn=False, dataPath='/home/annora/NetVLAD/output/data/', dataset='pittsburgh', debug_file='', evalEvery=1, fromscratch=False, lr=0.0001, lrGamma=0.5, lrStep=5.0, margin=0.1, mode='test', momentum=0.9, nEpochs=30, nGPU=3, nocuda=False, num_clusters=64, optim='SGD', patience=10, pooling='netvlad', resume='/home/annora/NetVLAD/output/runs/2019-12-02-10-15-37_vgg16_netvlad', runsPath='/home/annora/NetVLAD/output/runs/', savePath='/home/annora/NetVLAD/output/runs/2019-12-02-10-15-37_vgg16_netvlad/checkpoints', seed=123, split='test', start_epoch=0, threads=8, vladv2=False, weightDecay=0.001)
+2019-12-04 15:09:26,441 ===> Loading dataset(s)
+2019-12-04 15:09:26,441 ===> Building model
+2019-12-04 15:09:26,604 encoder moder:
+VGG16(
+  (conv1): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace)
+  )
+  (conv2): Sequential(
+    (0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace)
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (conv3): Sequential(
+    (0): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace)
+  )
+  (conv4): Sequential(
+    (0): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace)
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (conv5): Sequential(
+    (0): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace)
+  )
+  (conv6): Sequential(
+    (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace)
+  )
+  (conv7): Sequential(
+    (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace)
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (conv8): Sequential(
+    (0): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace)
+  )
+  (conv9): Sequential(
+    (0): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace)
+  )
+  (conv10): Sequential(
+    (0): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace)
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (conv11): Sequential(
+    (0): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace)
+  )
+  (conv12): Sequential(
+    (0): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace)
+  )
+  (conv13): Sequential(
+    (0): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  )
+  (conv13_relu_maxpool): Sequential(
+    (0): ReLU(inplace)
+    (1): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+)
+2019-12-04 15:09:27,507 initcache: /home/annora/NetVLAD/output/data/centroids/vgg16_pitts30k_64_desc_cen.hdf5
+2019-12-04 15:09:27,751 => loading checkpoint '/home/annora/NetVLAD/output/runs/2019-12-02-10-15-37_vgg16_netvlad/checkpoints/model_best.pth.tar'
+2019-12-04 15:09:31,344 => loaded checkpoint '/home/annora/NetVLAD/output/runs/2019-12-02-10-15-37_vgg16_netvlad/checkpoints/model_best.pth.tar' (epoch 13)
+2019-12-04 15:09:31,348 ===> Running evaluation step
+2019-12-04 15:09:31,621 ===> Evaluating on test set
+2019-12-04 15:09:31,623 ====> Extracting Features
+2019-12-04 15:10:02,723 ==> Batch (50/701)
+2019-12-04 15:10:17,568 ==> Batch (100/701)
+2019-12-04 15:10:32,450 ==> Batch (150/701)
+2019-12-04 15:10:47,351 ==> Batch (200/701)
+2019-12-04 15:11:02,235 ==> Batch (250/701)
+2019-12-04 15:11:17,168 ==> Batch (300/701)
+2019-12-04 15:11:32,136 ==> Batch (350/701)
+2019-12-04 15:11:47,167 ==> Batch (400/701)
+2019-12-04 15:12:02,195 ==> Batch (450/701)
+2019-12-04 15:12:17,217 ==> Batch (500/701)
+2019-12-04 15:12:32,233 ==> Batch (550/701)
+2019-12-04 15:12:47,275 ==> Batch (600/701)
+2019-12-04 15:13:02,305 ==> Batch (650/701)
+2019-12-04 15:13:17,155 ==> Batch (700/701)
+2019-12-04 15:13:20,431 ====> Building faiss index
+2019-12-04 15:13:21,397 ====> Calculating recall @ N
+2019-12-04 15:13:29,534 ====> Recall@1: 0.8198
+2019-12-04 15:13:29,535 ====> Recall@2: 0.8636
+2019-12-04 15:13:29,536 ====> Recall@3: 0.8844
+2019-12-04 15:13:29,537 ====> Recall@4: 0.8992
+2019-12-04 15:13:29,537 ====> Recall@5: 0.9096
+2019-12-04 15:13:29,538 ====> Recall@10: 0.9328
+2019-12-04 15:13:29,538 ====> Recall@15: 0.9454
+2019-12-04 15:13:29,539 ====> Recall@20: 0.9520
+2019-12-04 15:13:29,539 ====> Recall@25: 0.9575

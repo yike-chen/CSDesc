@@ -1,0 +1,6 @@
+2020-01-08 09:10:01,549 Namespace(arch='vgg16', batchSize=16, cacheBatchSize=144, cachePath='/home/annora/NetVLAD/output/', cacheRefreshRate=1000, ckpt='best', contilearn=False, dataPath='/home/annora/NetVLAD/output/data/', dataset='robotcar', evalEvery=1, fromscratch=False, lr=0.0001, lrGamma=0.5, lrStep=5, margin=0.1, mode='train', momentum=0.9, nEpochs=30, nGPU=1, nocuda=False, num_clusters=64, optim='SGD', patience=10, pooling='netvlad', premodel='imagenet', resume='', runsPath='/home/annora/NetVLAD/output/runs/', savePath='checkpoints', seed=123, split='val', start_epoch=0, threads=8, vladv2=True, weightDecay=0.001)
+2020-01-08 09:10:01,618 ===> Loading dataset(s)
+2020-01-08 09:10:04,223 ====> Training query set: 6636
+2020-01-08 09:10:04,329 ===> Evaluating on val set, query count: 3450
+2020-01-08 09:10:04,329 ===> Building model
+2020-01-08 09:10:07,077 Could not find clusters, please run with --mode=cluster before proceeding

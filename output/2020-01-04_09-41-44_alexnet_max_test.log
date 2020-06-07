@@ -1,0 +1,45 @@
+2020-01-04 09:41:44,500 Restored flags: ['--optim', 'SGD', '--lr', '0.0001', '--lrStep', '5', '--lrGamma', '0.5', '--weightDecay', '0.001', '--momentum', '0.9', '--seed', '123', '--patience', '10', '--arch', 'alexnet', '--pooling', 'max', '--num_clusters', '64', '--margin', '0.1']
+2020-01-04 09:41:44,503 Namespace(arch='alexnet', batchSize=16, cacheBatchSize=144, cachePath='/home/annora/NetVLAD/output/', cacheRefreshRate=0, ckpt='diy', ckpt_diy='/home/annora/NetVLAD/output/runs/2020-01-03-20-27-39_alexnet_max/checkpoints/model_best1.pth.tar', contilearn=False, dataPath='/home/annora/NetVLAD/output/data/', dataset='oxfordcar', debug_file='', evalEvery=1, fromscratch=False, lr=0.0001, lrGamma=0.5, lrStep=5.0, margin=0.1, mode='test', momentum=0.9, nEpochs=30, nGPU=1, nocuda=False, num_clusters=64, optim='SGD', patience=10, pooling='max', resume='/home/annora/NetVLAD/output/runs/2020-01-03-20-27-39_alexnet_max', runsPath='/home/annora/NetVLAD/output/runs/', savePath='checkpoints', seed=123, split='test', start_epoch=0, threads=4, vladv2=False, weightDecay=0.001)
+2020-01-04 09:41:44,566 ===> Loading dataset(s)
+2020-01-04 09:41:44,567 ===> Building model
+2020-01-04 09:41:44,627 encoder moder:
+AlexNet(
+  (conv1): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(11, 11), stride=(4, 4), padding=(2, 2))
+    (1): ReLU(inplace)
+    (2): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (conv2): Sequential(
+    (0): Conv2d(64, 192, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+    (1): ReLU(inplace)
+    (2): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (conv3): Sequential(
+    (0): Conv2d(192, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace)
+  )
+  (conv4): Sequential(
+    (0): Conv2d(384, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace)
+  )
+  (conv5): Sequential(
+    (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  )
+)
+2020-01-04 09:41:45,093 => loading checkpoint '/home/annora/NetVLAD/output/runs/2020-01-03-20-27-39_alexnet_max/checkpoints/model_best1.pth.tar'
+2020-01-04 09:41:49,203 => loaded checkpoint '/home/annora/NetVLAD/output/runs/2020-01-03-20-27-39_alexnet_max/checkpoints/model_best1.pth.tar' (epoch 30)
+2020-01-04 09:41:49,205 ===> Running evaluation step
+2020-01-04 09:41:49,364 ===> Evaluating on test set
+2020-01-04 09:41:49,365 ====> Extracting Features
+2020-01-04 09:43:01,403 ==> Batch (50/72)
+2020-01-04 09:43:27,294 ====> Building faiss index
+2020-01-04 09:43:27,298 ====> Calculating recall @ N
+2020-01-04 09:43:28,105 ====> Recall@1: 0.7080
+2020-01-04 09:43:28,107 ====> Recall@2: 0.7356
+2020-01-04 09:43:28,107 ====> Recall@3: 0.7472
+2020-01-04 09:43:28,108 ====> Recall@4: 0.7541
+2020-01-04 09:43:28,108 ====> Recall@5: 0.7602
+2020-01-04 09:43:28,108 ====> Recall@10: 0.7736
+2020-01-04 09:43:28,109 ====> Recall@15: 0.7849
+2020-01-04 09:43:28,109 ====> Recall@20: 0.7912
+2020-01-04 09:43:28,110 ====> Recall@25: 0.7976

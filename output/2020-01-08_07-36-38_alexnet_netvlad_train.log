@@ -1,0 +1,174 @@
+2020-01-08 07:36:38,192 Namespace(arch='alexnet', batchSize=16, cacheBatchSize=144, cachePath='/home/annora/NetVLAD/output/', cacheRefreshRate=1000, ckpt='best', contilearn=False, dataPath='/home/annora/NetVLAD/output/data/', dataset='robotcar', evalEvery=1, fromscratch=False, lr=0.001, lrGamma=0.5, lrStep=5, margin=0.1, mode='train', momentum=0.9, nEpochs=30, nGPU=1, nocuda=False, num_clusters=64, optim='SGD', patience=10, pooling='netvlad', premodel='imagenet', resume='', runsPath='/home/annora/NetVLAD/output/runs/', savePath='checkpoints', seed=123, split='val', start_epoch=0, threads=8, vladv2=True, weightDecay=0.001)
+2020-01-08 07:36:38,258 ===> Loading dataset(s)
+2020-01-08 07:36:40,927 ====> Training query set: 6636
+2020-01-08 07:36:41,025 ===> Evaluating on val set, query count: 3450
+2020-01-08 07:36:41,025 ===> Building model
+2020-01-08 07:36:41,074 encoder moder:
+AlexNet(
+  (conv1): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(11, 11), stride=(4, 4), padding=(2, 2))
+    (1): ReLU(inplace)
+    (2): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (conv2): Sequential(
+    (0): Conv2d(64, 192, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+    (1): ReLU(inplace)
+    (2): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (conv3): Sequential(
+    (0): Conv2d(192, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace)
+  )
+  (conv4): Sequential(
+    (0): Conv2d(384, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace)
+  )
+  (conv5): Sequential(
+    (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  )
+)
+2020-01-08 07:36:48,481 ===> Training model
+2020-01-08 07:36:48,483 ===> Saving state to: /home/annora/NetVLAD/output/runs/Jan08_07-36-48_alexnet_netvlad
+2020-01-08 07:36:48,483 ====> Building Cache
+2020-01-08 07:38:11,227 Allocated:11.71875 MB
+2020-01-08 07:38:11,227 Cached:2597.125 MB
+2020-01-08 07:41:00,525 ==> Epoch[1](50/415): Loss: 0.3159
+2020-01-08 07:41:00,527 Allocated:34.4072265625 MB
+2020-01-08 07:41:00,528 Cached:7828.75 MB
+2020-01-08 07:41:19,425 ====> Building Cache
+2020-01-08 07:42:38,931 Allocated:34.40673828125 MB
+2020-01-08 07:42:38,931 Cached:2779.0 MB
+2020-01-08 07:44:45,188 ==> Epoch[1](100/415): Loss: 0.3158
+2020-01-08 07:44:45,190 Allocated:34.4072265625 MB
+2020-01-08 07:44:45,191 Cached:7859.0 MB
+2020-01-08 07:45:38,910 ====> Building Cache
+2020-01-08 07:47:06,218 Allocated:34.40673828125 MB
+2020-01-08 07:47:06,218 Cached:2779.0 MB
+2020-01-08 07:48:50,998 ==> Epoch[1](150/415): Loss: 0.3157
+2020-01-08 07:48:51,000 Allocated:34.4072265625 MB
+2020-01-08 07:48:51,000 Cached:7859.0 MB
+2020-01-08 07:50:03,892 ====> Building Cache
+2020-01-08 07:51:26,273 Allocated:34.40673828125 MB
+2020-01-08 07:51:26,273 Cached:2779.0 MB
+2020-01-08 07:52:56,016 ==> Epoch[1](200/415): Loss: 0.3158
+2020-01-08 07:52:56,019 Allocated:34.4072265625 MB
+2020-01-08 07:52:56,020 Cached:7859.0 MB
+2020-01-08 07:54:27,704 ====> Building Cache
+2020-01-08 07:55:50,522 Allocated:34.40673828125 MB
+2020-01-08 07:55:50,522 Cached:2779.0 MB
+2020-01-08 07:56:56,399 ==> Epoch[1](250/415): Loss: 0.3164
+2020-01-08 07:56:56,402 Allocated:34.4072265625 MB
+2020-01-08 07:56:56,402 Cached:7859.0 MB
+2020-01-08 07:58:49,023 ==> Epoch[1](300/415): Loss: 0.3161
+2020-01-08 07:58:49,026 Allocated:34.4072265625 MB
+2020-01-08 07:58:49,026 Cached:7859.0 MB
+2020-01-08 07:58:49,957 ====> Building Cache
+2020-01-08 08:00:18,018 Allocated:34.40673828125 MB
+2020-01-08 08:00:18,019 Cached:2779.0 MB
+2020-01-08 08:02:56,012 ==> Epoch[1](350/415): Loss: 0.3161
+2020-01-08 08:02:56,014 Allocated:34.4072265625 MB
+2020-01-08 08:02:56,014 Cached:7859.0 MB
+2020-01-08 08:03:13,572 ====> Building Cache
+2020-01-08 08:04:35,300 Allocated:34.40673828125 MB
+2020-01-08 08:04:35,300 Cached:2779.0 MB
+2020-01-08 08:06:49,040 ==> Epoch[1](400/415): Loss: 0.3157
+2020-01-08 08:06:49,042 Allocated:34.4072265625 MB
+2020-01-08 08:06:49,043 Cached:7859.0 MB
+2020-01-08 08:07:41,107 ===> Epoch 1 Complete: Avg. Loss: 0.3197
+2020-01-08 08:07:41,108 ====> Extracting Features
+2020-01-08 08:08:29,997 ==> Batch (50/72)
+2020-01-08 08:08:43,678 ====> Building faiss index
+2020-01-08 08:08:44,047 ====> Calculating recall @ N
+2020-01-08 08:08:46,390 ====> Recall_1: 0.3649
+2020-01-08 08:08:46,390 Summary name Val/Recall@1 is illegal; using Val/Recall_1 instead.
+2020-01-08 08:08:46,390 ====> Recall_5: 0.5867
+2020-01-08 08:08:46,391 Summary name Val/Recall@5 is illegal; using Val/Recall_5 instead.
+2020-01-08 08:08:46,391 ====> Recall_10: 0.6530
+2020-01-08 08:08:46,391 Summary name Val/Recall@10 is illegal; using Val/Recall_10 instead.
+2020-01-08 08:08:46,391 ====> Recall_20: 0.6930
+2020-01-08 08:08:46,392 Summary name Val/Recall@20 is illegal; using Val/Recall_20 instead.
+2020-01-08 08:08:46,506 ====> Building Cache
+2020-01-08 08:10:10,601 Allocated:32.4072265625 MB
+2020-01-08 08:10:10,601 Cached:10001.75 MB
+2020-01-08 08:12:55,094 ==> Epoch[2](50/415): Loss: 0.3159
+2020-01-08 08:12:55,096 Allocated:34.4072265625 MB
+2020-01-08 08:12:55,097 Cached:10023.75 MB
+2020-01-08 08:13:13,234 ====> Building Cache
+2020-01-08 08:14:32,909 Allocated:34.40673828125 MB
+2020-01-08 08:14:32,910 Cached:2780.0 MB
+2020-01-08 08:16:48,824 ==> Epoch[2](100/415): Loss: 0.3158
+2020-01-08 08:16:48,826 Allocated:34.4072265625 MB
+2020-01-08 08:16:48,827 Cached:7859.0 MB
+2020-01-08 08:17:39,034 ====> Building Cache
+2020-01-08 08:19:10,457 Allocated:34.40673828125 MB
+2020-01-08 08:19:10,457 Cached:2780.0 MB
+2020-01-08 08:21:04,508 ==> Epoch[2](150/415): Loss: 0.3158
+2020-01-08 08:21:04,511 Allocated:34.4072265625 MB
+2020-01-08 08:21:04,511 Cached:7859.0 MB
+2020-01-08 08:22:18,142 ====> Building Cache
+2020-01-08 08:23:38,022 Allocated:34.40673828125 MB
+2020-01-08 08:23:38,023 Cached:2780.0 MB
+2020-01-08 08:25:09,355 ==> Epoch[2](200/415): Loss: 0.3158
+2020-01-08 08:25:09,357 Allocated:34.4072265625 MB
+2020-01-08 08:25:09,357 Cached:7859.0 MB
+2020-01-08 08:26:44,780 ====> Building Cache
+2020-01-08 08:28:04,087 Allocated:34.40673828125 MB
+2020-01-08 08:28:04,088 Cached:2780.0 MB
+2020-01-08 08:29:11,340 ==> Epoch[2](250/415): Loss: 0.3162
+2020-01-08 08:29:11,342 Allocated:34.4072265625 MB
+2020-01-08 08:29:11,342 Cached:7859.0 MB
+2020-01-08 08:31:08,393 ==> Epoch[2](300/415): Loss: 0.3163
+2020-01-08 08:31:08,395 Allocated:34.4072265625 MB
+2020-01-08 08:31:08,395 Cached:7859.0 MB
+2020-01-08 08:31:09,137 ====> Building Cache
+2020-01-08 08:32:30,853 Allocated:34.40673828125 MB
+2020-01-08 08:32:30,853 Cached:2780.0 MB
+2020-01-08 08:35:23,865 ==> Epoch[2](350/415): Loss: 0.3161
+2020-01-08 08:35:23,868 Allocated:34.4072265625 MB
+2020-01-08 08:35:23,868 Cached:7859.0 MB
+2020-01-08 08:35:43,237 ====> Building Cache
+2020-01-08 08:37:15,949 Allocated:34.40673828125 MB
+2020-01-08 08:37:15,950 Cached:2780.0 MB
+2020-01-08 08:39:19,559 ==> Epoch[2](400/415): Loss: 0.3157
+2020-01-08 08:39:19,563 Allocated:34.4072265625 MB
+2020-01-08 08:39:19,564 Cached:7859.0 MB
+2020-01-08 08:40:12,953 ===> Epoch 2 Complete: Avg. Loss: 0.3197
+2020-01-08 08:40:12,954 ====> Extracting Features
+2020-01-08 08:41:05,465 ==> Batch (50/72)
+2020-01-08 08:41:19,729 ====> Building faiss index
+2020-01-08 08:41:20,095 ====> Calculating recall @ N
+2020-01-08 08:41:22,526 ====> Recall_1: 0.3933
+2020-01-08 08:41:22,526 Summary name Val/Recall@1 is illegal; using Val/Recall_1 instead.
+2020-01-08 08:41:22,527 ====> Recall_5: 0.5951
+2020-01-08 08:41:22,528 Summary name Val/Recall@5 is illegal; using Val/Recall_5 instead.
+2020-01-08 08:41:22,528 ====> Recall_10: 0.6545
+2020-01-08 08:41:22,529 Summary name Val/Recall@10 is illegal; using Val/Recall_10 instead.
+2020-01-08 08:41:22,529 ====> Recall_20: 0.7043
+2020-01-08 08:41:22,529 Summary name Val/Recall@20 is illegal; using Val/Recall_20 instead.
+2020-01-08 08:41:22,744 ====> Building Cache
+2020-01-08 08:42:46,117 Allocated:32.4072265625 MB
+2020-01-08 08:42:46,118 Cached:10001.75 MB
+2020-01-08 08:45:26,237 ==> Epoch[3](50/415): Loss: 0.3158
+2020-01-08 08:45:26,240 Allocated:34.4072265625 MB
+2020-01-08 08:45:26,241 Cached:10023.75 MB
+2020-01-08 08:45:47,043 ====> Building Cache
+2020-01-08 08:47:09,417 Allocated:34.40673828125 MB
+2020-01-08 08:47:09,418 Cached:2780.0 MB
+2020-01-08 08:49:19,931 ==> Epoch[3](100/415): Loss: 0.3158
+2020-01-08 08:49:19,934 Allocated:34.4072265625 MB
+2020-01-08 08:49:19,934 Cached:7859.0 MB
+2020-01-08 08:50:10,835 ====> Building Cache
+2020-01-08 08:51:31,578 Allocated:34.40673828125 MB
+2020-01-08 08:51:31,579 Cached:2780.0 MB
+2020-01-08 08:53:19,878 ==> Epoch[3](150/415): Loss: 0.3158
+2020-01-08 08:53:19,880 Allocated:34.4072265625 MB
+2020-01-08 08:53:19,881 Cached:7859.0 MB
+2020-01-08 08:54:28,882 ====> Building Cache
+2020-01-08 08:55:53,570 Allocated:34.40673828125 MB
+2020-01-08 08:55:53,571 Cached:2780.0 MB
+2020-01-08 08:57:17,805 ==> Epoch[3](200/415): Loss: 0.3159
+2020-01-08 08:57:17,808 Allocated:34.4072265625 MB
+2020-01-08 08:57:17,808 Cached:7859.0 MB
+2020-01-08 08:58:46,670 ====> Building Cache
+2020-01-08 09:00:07,765 Allocated:34.40673828125 MB
+2020-01-08 09:00:07,766 Cached:2780.0 MB

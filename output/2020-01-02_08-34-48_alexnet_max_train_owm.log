@@ -1,0 +1,597 @@
+2020-01-02 08:34:48,972 Namespace(arch='alexnet', batchSize=16, cacheBatchSize=144, cachePath='/home/annora/NetVLAD/output/', cacheRefreshRate=0, ckpt='best', ckpt_diy='model_best0.pth.tar', contilearn=True, dataPath='/home/annora/NetVLAD/output/data/', dataset='pittsburgh', debug_file='', evalEvery=1, fromscratch=True, lr=0.001, lrGamma=0.5, lrStep=5, margin=0.1, mode='train', momentum=0.9, nEpochs=30, nGPU=1, nocuda=False, num_clusters=64, optim='SGD', patience=10, pooling='max', resume='', runsPath='/home/annora/NetVLAD/output/runs/', savePath='checkpoints', seed=123, split='val', start_epoch=0, threads=4, vladv2=False, weightDecay=0.001)
+2020-01-02 08:34:49,037 ===> Loading dataset(s)
+2020-01-02 08:34:49,037 ===> Building model
+2020-01-02 08:34:49,105 encoder moder:
+AlexNet(
+  (conv1): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(11, 11), stride=(4, 4), padding=(2, 2))
+    (1): ReLU(inplace)
+    (2): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (conv2): Sequential(
+    (0): Conv2d(64, 192, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+    (1): ReLU(inplace)
+    (2): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (conv3): Sequential(
+    (0): Conv2d(192, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace)
+  )
+  (conv4): Sequential(
+    (0): Conv2d(384, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace)
+  )
+  (conv5): Sequential(
+    (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  )
+)
+2020-01-02 08:34:54,491 ---->>>> trainfiles: ['oxRobocar_single_train.mat', 'oxRobocar_doubleN_train.mat']
+2020-01-02 08:34:54,496 ===> Saving state to: /home/annora/NetVLAD/output/runs/2020-01-02-08-34-54_alexnet_max
+2020-01-02 08:34:57,493 ====> Training query set:6636
+2020-01-02 08:34:57,603 ===> Evaluating on val set, query count:3450
+2020-01-02 08:34:57,603 ---->>>> testfile: oxRobocar_single_val.mat
+2020-01-02 08:34:57,603 ===> Training model
+2020-01-02 08:34:57,603 ====> Building Cache
+2020-01-02 08:34:57,604 h5feat cache at: /home/annora/NetVLAD/output/train_feat_cache.hdf5
+2020-01-02 08:37:17,671 Allocated:99.34619140625 MB
+2020-01-02 08:37:17,671 Cached:2683.375 MB
+2020-01-02 08:42:45,139 ==> Task[1]Epoch[1](50/415): Loss: 0.2888
+2020-01-02 08:42:45,144 Allocated:120.78369140625 MB
+2020-01-02 08:42:45,144 Cached:1035.875 MB
+2020-01-02 08:46:35,014 ==> Task[1]Epoch[1](100/415): Loss: 0.3064
+2020-01-02 08:46:35,015 Allocated:121.03369140625 MB
+2020-01-02 08:46:35,015 Cached:1035.875 MB
+2020-01-02 08:48:40,186 ==> Task[1]Epoch[1](150/415): Loss: 0.2986
+2020-01-02 08:48:40,187 Allocated:121.65869140625 MB
+2020-01-02 08:48:40,187 Cached:1034.875 MB
+2020-01-02 08:50:29,509 ==> Task[1]Epoch[1](200/415): Loss: 0.2891
+2020-01-02 08:50:29,510 Allocated:122.15869140625 MB
+2020-01-02 08:50:29,510 Cached:1035.875 MB
+2020-01-02 08:53:06,593 ==> Task[1]Epoch[1](250/415): Loss: 0.2908
+2020-01-02 08:53:06,601 Allocated:120.78369140625 MB
+2020-01-02 08:53:06,608 Cached:1035.875 MB
+2020-01-02 08:57:02,350 ==> Task[1]Epoch[1](300/415): Loss: 0.2929
+2020-01-02 08:57:02,351 Allocated:122.15869140625 MB
+2020-01-02 08:57:02,352 Cached:1034.875 MB
+2020-01-02 09:00:35,828 ==> Task[1]Epoch[1](350/415): Loss: 0.3010
+2020-01-02 09:00:35,831 Allocated:121.65869140625 MB
+2020-01-02 09:00:35,832 Cached:1035.875 MB
+2020-01-02 09:05:12,587 ==> Task[1]Epoch[1](400/415): Loss: 0.2882
+2020-01-02 09:05:12,588 Allocated:121.65869140625 MB
+2020-01-02 09:05:12,588 Cached:1035.875 MB
+2020-01-02 09:06:42,183 ===> Task 1 Epoch 1 Complete: Avg. Loss: 0.2968
+2020-01-02 09:06:42,187 begin test:
+2020-01-02 09:06:42,189 ====> Extracting Features
+2020-01-02 09:07:54,389 ==> Batch (50/72)
+2020-01-02 09:08:20,617 ====> Building faiss index
+2020-01-02 09:08:20,619 ====> Calculating recall @ N
+2020-01-02 09:08:21,177 ====> Recall@1: 0.5310
+2020-01-02 09:08:21,178 ====> Recall@2: 0.5849
+2020-01-02 09:08:21,178 ====> Recall@3: 0.6209
+2020-01-02 09:08:21,178 ====> Recall@4: 0.6412
+2020-01-02 09:08:21,178 ====> Recall@5: 0.6536
+2020-01-02 09:08:21,179 ====> Recall@10: 0.6870
+2020-01-02 09:08:21,179 ====> Recall@15: 0.7125
+2020-01-02 09:08:21,179 ====> Recall@20: 0.7261
+2020-01-02 09:08:21,179 ====> Recall@25: 0.7412
+2020-01-02 09:08:21,218 ====> Building Cache
+2020-01-02 09:08:21,218 h5feat cache at: /home/annora/NetVLAD/output/train_feat_cache.hdf5
+2020-01-02 09:10:40,965 Allocated:119.03369140625 MB
+2020-01-02 09:10:40,965 Cached:10183.125 MB
+2020-01-02 09:12:52,551 ==> Task[1]Epoch[2](50/415): Loss: 0.2798
+2020-01-02 09:12:52,553 Allocated:121.65869140625 MB
+2020-01-02 09:12:52,553 Cached:1036.875 MB
+2020-01-02 09:14:52,356 ==> Task[1]Epoch[2](100/415): Loss: 0.3039
+2020-01-02 09:14:52,357 Allocated:122.15869140625 MB
+2020-01-02 09:14:52,358 Cached:1036.875 MB
+2020-01-02 09:16:41,739 ==> Task[1]Epoch[2](150/415): Loss: 0.2914
+2020-01-02 09:16:41,740 Allocated:120.78369140625 MB
+2020-01-02 09:16:41,741 Cached:1036.875 MB
+2020-01-02 09:18:42,531 ==> Task[1]Epoch[2](200/415): Loss: 0.2395
+2020-01-02 09:18:42,532 Allocated:122.15869140625 MB
+2020-01-02 09:18:42,533 Cached:1036.875 MB
+2020-01-02 09:22:12,340 ==> Task[1]Epoch[2](250/415): Loss: 0.2873
+2020-01-02 09:22:12,346 Allocated:121.65869140625 MB
+2020-01-02 09:22:12,347 Cached:1036.875 MB
+2020-01-02 09:26:34,133 ==> Task[1]Epoch[2](300/415): Loss: 0.2907
+2020-01-02 09:26:34,136 Allocated:121.65869140625 MB
+2020-01-02 09:26:34,137 Cached:1036.875 MB
+2020-01-02 09:30:58,445 ==> Task[1]Epoch[2](350/415): Loss: 0.3012
+2020-01-02 09:30:58,447 Allocated:121.65869140625 MB
+2020-01-02 09:30:58,454 Cached:1036.875 MB
+2020-01-02 09:34:22,627 ==> Task[1]Epoch[2](400/415): Loss: 0.2876
+2020-01-02 09:34:22,630 Allocated:121.03369140625 MB
+2020-01-02 09:34:22,631 Cached:1036.875 MB
+2020-01-02 09:35:48,306 ===> Task 1 Epoch 2 Complete: Avg. Loss: 0.2873
+2020-01-02 09:35:48,307 begin test:
+2020-01-02 09:35:48,308 ====> Extracting Features
+2020-01-02 09:36:58,512 ==> Batch (50/72)
+2020-01-02 09:37:23,922 ====> Building faiss index
+2020-01-02 09:37:23,924 ====> Calculating recall @ N
+2020-01-02 09:37:24,439 ====> Recall@1: 0.5388
+2020-01-02 09:37:24,440 ====> Recall@2: 0.5945
+2020-01-02 09:37:24,440 ====> Recall@3: 0.6284
+2020-01-02 09:37:24,440 ====> Recall@4: 0.6449
+2020-01-02 09:37:24,440 ====> Recall@5: 0.6580
+2020-01-02 09:37:24,441 ====> Recall@10: 0.6968
+2020-01-02 09:37:24,441 ====> Recall@15: 0.7162
+2020-01-02 09:37:24,441 ====> Recall@20: 0.7328
+2020-01-02 09:37:24,441 ====> Recall@25: 0.7470
+2020-01-02 09:37:24,559 ====> Building Cache
+2020-01-02 09:37:24,559 h5feat cache at: /home/annora/NetVLAD/output/train_feat_cache.hdf5
+2020-01-02 09:39:43,479 Allocated:120.15869140625 MB
+2020-01-02 09:39:43,480 Cached:10183.125 MB
+2020-01-02 09:45:05,518 ==> Task[1]Epoch[3](50/415): Loss: 0.2762
+2020-01-02 09:45:05,522 Allocated:120.78369140625 MB
+2020-01-02 09:45:05,522 Cached:1035.875 MB
+2020-01-02 09:49:32,716 ==> Task[1]Epoch[3](100/415): Loss: 0.3026
+2020-01-02 09:49:32,717 Allocated:122.15869140625 MB
+2020-01-02 09:49:32,718 Cached:1035.875 MB
+2020-01-02 09:53:26,606 ==> Task[1]Epoch[3](150/415): Loss: 0.2847
+2020-01-02 09:53:26,614 Allocated:121.65869140625 MB
+2020-01-02 09:53:26,620 Cached:1035.875 MB
+2020-01-02 09:58:29,567 ==> Task[1]Epoch[3](200/415): Loss: 0.2159
+2020-01-02 09:58:29,570 Allocated:121.65869140625 MB
+2020-01-02 09:58:29,572 Cached:1035.875 MB
+2020-01-02 10:03:15,737 ==> Task[1]Epoch[3](250/415): Loss: 0.2847
+2020-01-02 10:03:15,740 Allocated:121.65869140625 MB
+2020-01-02 10:03:15,741 Cached:1035.875 MB
+2020-01-02 10:07:43,534 ==> Task[1]Epoch[3](300/415): Loss: 0.2887
+2020-01-02 10:07:43,537 Allocated:121.03369140625 MB
+2020-01-02 10:07:43,538 Cached:1035.875 MB
+2020-01-02 10:11:30,862 ==> Task[1]Epoch[3](350/415): Loss: 0.2993
+2020-01-02 10:11:30,865 Allocated:120.65869140625 MB
+2020-01-02 10:11:30,867 Cached:1035.875 MB
+2020-01-02 10:16:06,144 ==> Task[1]Epoch[3](400/415): Loss: 0.2852
+2020-01-02 10:16:06,148 Allocated:122.03369140625 MB
+2020-01-02 10:16:06,149 Cached:1035.875 MB
+2020-01-02 10:17:32,018 ===> Task 1 Epoch 3 Complete: Avg. Loss: 0.2815
+2020-01-02 10:17:32,019 begin test:
+2020-01-02 10:17:32,020 ====> Extracting Features
+2020-01-02 10:18:43,014 ==> Batch (50/72)
+2020-01-02 10:19:09,483 ====> Building faiss index
+2020-01-02 10:19:09,488 ====> Calculating recall @ N
+2020-01-02 10:19:10,707 ====> Recall@1: 0.5646
+2020-01-02 10:19:10,708 ====> Recall@2: 0.6075
+2020-01-02 10:19:10,710 ====> Recall@3: 0.6301
+2020-01-02 10:19:10,713 ====> Recall@4: 0.6481
+2020-01-02 10:19:10,715 ====> Recall@5: 0.6588
+2020-01-02 10:19:10,717 ====> Recall@10: 0.6959
+2020-01-02 10:19:10,719 ====> Recall@15: 0.7177
+2020-01-02 10:19:10,721 ====> Recall@20: 0.7348
+2020-01-02 10:19:10,722 ====> Recall@25: 0.7530
+2020-01-02 10:19:10,880 ====> Building Cache
+2020-01-02 10:19:10,881 h5feat cache at: /home/annora/NetVLAD/output/train_feat_cache.hdf5
+2020-01-02 10:21:29,557 Allocated:120.15869140625 MB
+2020-01-02 10:21:29,558 Cached:10183.125 MB
+2020-01-02 10:23:46,641 ==> Task[1]Epoch[4](50/415): Loss: 0.2733
+2020-01-02 10:23:46,642 Allocated:121.65869140625 MB
+2020-01-02 10:23:46,643 Cached:1035.875 MB
+2020-01-02 10:25:34,611 ==> Task[1]Epoch[4](100/415): Loss: 0.3014
+2020-01-02 10:25:34,612 Allocated:121.65869140625 MB
+2020-01-02 10:25:34,613 Cached:1035.875 MB
+2020-01-02 10:27:33,531 ==> Task[1]Epoch[4](150/415): Loss: 0.2802
+2020-01-02 10:27:33,533 Allocated:121.65869140625 MB
+2020-01-02 10:27:33,533 Cached:1035.875 MB
+2020-01-02 10:29:23,069 ==> Task[1]Epoch[4](200/415): Loss: 0.2022
+2020-01-02 10:29:23,070 Allocated:121.03369140625 MB
+2020-01-02 10:29:23,070 Cached:1035.875 MB
+2020-01-02 10:31:13,994 ==> Task[1]Epoch[4](250/415): Loss: 0.2821
+2020-01-02 10:31:13,995 Allocated:120.65869140625 MB
+2020-01-02 10:31:13,995 Cached:1035.875 MB
+2020-01-02 10:33:07,041 ==> Task[1]Epoch[4](300/415): Loss: 0.2874
+2020-01-02 10:33:07,042 Allocated:122.03369140625 MB
+2020-01-02 10:33:07,042 Cached:1035.875 MB
+2020-01-02 10:34:56,908 ==> Task[1]Epoch[4](350/415): Loss: 0.2985
+2020-01-02 10:34:56,909 Allocated:121.28369140625 MB
+2020-01-02 10:34:56,909 Cached:1035.875 MB
+2020-01-02 10:36:46,034 ==> Task[1]Epoch[4](400/415): Loss: 0.2833
+2020-01-02 10:36:46,035 Allocated:120.65869140625 MB
+2020-01-02 10:36:46,035 Cached:1035.875 MB
+2020-01-02 10:37:18,475 ===> Task 1 Epoch 4 Complete: Avg. Loss: 0.2773
+2020-01-02 10:37:18,477 begin test:
+2020-01-02 10:37:18,477 ====> Extracting Features
+2020-01-02 10:38:28,727 ==> Batch (50/72)
+2020-01-02 10:38:54,561 ====> Building faiss index
+2020-01-02 10:38:54,565 ====> Calculating recall @ N
+2020-01-02 10:38:55,229 ====> Recall@1: 0.5716
+2020-01-02 10:38:55,230 ====> Recall@2: 0.6113
+2020-01-02 10:38:55,230 ====> Recall@3: 0.6301
+2020-01-02 10:38:55,231 ====> Recall@4: 0.6490
+2020-01-02 10:38:55,231 ====> Recall@5: 0.6574
+2020-01-02 10:38:55,231 ====> Recall@10: 0.6951
+2020-01-02 10:38:55,231 ====> Recall@15: 0.7157
+2020-01-02 10:38:55,231 ====> Recall@20: 0.7322
+2020-01-02 10:38:55,232 ====> Recall@25: 0.7507
+2020-01-02 10:38:55,287 ====> Building Cache
+2020-01-02 10:38:55,288 h5feat cache at: /home/annora/NetVLAD/output/train_feat_cache.hdf5
+2020-01-02 10:41:15,800 Allocated:119.65869140625 MB
+2020-01-02 10:41:15,800 Cached:10183.125 MB
+2020-01-02 10:43:32,070 ==> Task[1]Epoch[5](50/415): Loss: 0.2718
+2020-01-02 10:43:32,073 Allocated:121.65869140625 MB
+2020-01-02 10:43:32,073 Cached:1035.875 MB
+2020-01-02 10:45:26,941 ==> Task[1]Epoch[5](100/415): Loss: 0.3007
+2020-01-02 10:45:26,942 Allocated:121.03369140625 MB
+2020-01-02 10:45:26,943 Cached:1035.875 MB
+2020-01-02 10:47:29,884 ==> Task[1]Epoch[5](150/415): Loss: 0.2761
+2020-01-02 10:47:29,885 Allocated:120.65869140625 MB
+2020-01-02 10:47:29,885 Cached:1035.875 MB
+2020-01-02 10:49:34,647 ==> Task[1]Epoch[5](200/415): Loss: 0.1910
+2020-01-02 10:49:34,649 Allocated:122.03369140625 MB
+2020-01-02 10:49:34,649 Cached:1035.875 MB
+2020-01-02 10:55:00,185 ==> Task[1]Epoch[5](250/415): Loss: 0.2815
+2020-01-02 10:55:00,194 Allocated:121.28369140625 MB
+2020-01-02 10:55:00,203 Cached:1035.875 MB
+2020-01-02 11:00:32,161 ==> Task[1]Epoch[5](300/415): Loss: 0.2861
+2020-01-02 11:00:32,169 Allocated:120.65869140625 MB
+2020-01-02 11:00:32,171 Cached:1035.875 MB
+2020-01-02 11:02:52,526 ==> Task[1]Epoch[5](350/415): Loss: 0.2976
+2020-01-02 11:02:52,528 Allocated:121.03369140625 MB
+2020-01-02 11:02:52,528 Cached:1035.875 MB
+2020-01-02 11:04:53,505 ==> Task[1]Epoch[5](400/415): Loss: 0.2821
+2020-01-02 11:04:53,507 Allocated:120.90869140625 MB
+2020-01-02 11:04:53,507 Cached:1035.875 MB
+2020-01-02 11:05:30,380 ===> Task 1 Epoch 5 Complete: Avg. Loss: 0.2741
+2020-01-02 11:05:30,381 begin test:
+2020-01-02 11:05:30,382 ====> Extracting Features
+2020-01-02 11:06:43,111 ==> Batch (50/72)
+2020-01-02 11:07:09,147 ====> Building faiss index
+2020-01-02 11:07:09,148 ====> Calculating recall @ N
+2020-01-02 11:07:09,703 ====> Recall@1: 0.5710
+2020-01-02 11:07:09,704 ====> Recall@2: 0.6125
+2020-01-02 11:07:09,704 ====> Recall@3: 0.6301
+2020-01-02 11:07:09,704 ====> Recall@4: 0.6470
+2020-01-02 11:07:09,704 ====> Recall@5: 0.6580
+2020-01-02 11:07:09,704 ====> Recall@10: 0.6948
+2020-01-02 11:07:09,705 ====> Recall@15: 0.7151
+2020-01-02 11:07:09,705 ====> Recall@20: 0.7313
+2020-01-02 11:07:09,705 ====> Recall@25: 0.7499
+2020-01-02 11:07:09,762 ====> Building Cache
+2020-01-02 11:07:09,763 h5feat cache at: /home/annora/NetVLAD/output/train_feat_cache.hdf5
+2020-01-02 11:09:32,843 Allocated:119.03369140625 MB
+2020-01-02 11:09:32,844 Cached:10183.125 MB
+2020-01-02 11:11:45,656 ==> Task[1]Epoch[6](50/415): Loss: 0.2691
+2020-01-02 11:11:45,657 Allocated:120.65869140625 MB
+2020-01-02 11:11:45,658 Cached:1035.875 MB
+2020-01-02 11:13:38,173 ==> Task[1]Epoch[6](100/415): Loss: 0.3003
+2020-01-02 11:13:38,174 Allocated:122.03369140625 MB
+2020-01-02 11:13:38,175 Cached:1035.875 MB
+2020-01-02 11:15:30,789 ==> Task[1]Epoch[6](150/415): Loss: 0.2749
+2020-01-02 11:15:30,791 Allocated:121.28369140625 MB
+2020-01-02 11:15:30,791 Cached:1035.875 MB
+2020-01-02 11:17:22,999 ==> Task[1]Epoch[6](200/415): Loss: 0.1855
+2020-01-02 11:17:23,002 Allocated:120.65869140625 MB
+2020-01-02 11:17:23,002 Cached:1035.875 MB
+2020-01-02 11:19:16,807 ==> Task[1]Epoch[6](250/415): Loss: 0.2804
+2020-01-02 11:19:16,808 Allocated:121.03369140625 MB
+2020-01-02 11:19:16,808 Cached:1035.875 MB
+2020-01-02 11:21:08,037 ==> Task[1]Epoch[6](300/415): Loss: 0.2850
+2020-01-02 11:21:08,039 Allocated:120.90869140625 MB
+2020-01-02 11:21:08,039 Cached:1035.875 MB
+2020-01-02 11:23:07,471 ==> Task[1]Epoch[6](350/415): Loss: 0.2970
+2020-01-02 11:23:07,472 Allocated:120.65869140625 MB
+2020-01-02 11:23:07,472 Cached:1035.875 MB
+2020-01-02 11:25:08,738 ==> Task[1]Epoch[6](400/415): Loss: 0.2808
+2020-01-02 11:25:08,739 Allocated:121.15869140625 MB
+2020-01-02 11:25:08,739 Cached:1035.875 MB
+2020-01-02 11:25:41,208 ===> Task 1 Epoch 6 Complete: Avg. Loss: 0.2725
+2020-01-02 11:25:41,210 begin test:
+2020-01-02 11:25:41,210 ====> Extracting Features
+2020-01-02 11:26:54,419 ==> Batch (50/72)
+2020-01-02 11:27:20,770 ====> Building faiss index
+2020-01-02 11:27:20,771 ====> Calculating recall @ N
+2020-01-02 11:27:21,295 ====> Recall@1: 0.5710
+2020-01-02 11:27:21,296 ====> Recall@2: 0.6130
+2020-01-02 11:27:21,296 ====> Recall@3: 0.6290
+2020-01-02 11:27:21,297 ====> Recall@4: 0.6449
+2020-01-02 11:27:21,297 ====> Recall@5: 0.6583
+2020-01-02 11:27:21,297 ====> Recall@10: 0.6951
+2020-01-02 11:27:21,297 ====> Recall@15: 0.7162
+2020-01-02 11:27:21,297 ====> Recall@20: 0.7313
+2020-01-02 11:27:21,297 ====> Recall@25: 0.7467
+2020-01-02 11:27:21,360 ====> Building Cache
+2020-01-02 11:27:21,360 h5feat cache at: /home/annora/NetVLAD/output/train_feat_cache.hdf5
+2020-01-02 11:29:41,697 Allocated:120.03369140625 MB
+2020-01-02 11:29:41,698 Cached:10183.125 MB
+2020-01-02 11:31:56,088 ==> Task[1]Epoch[7](50/415): Loss: 0.2683
+2020-01-02 11:31:56,090 Allocated:121.28369140625 MB
+2020-01-02 11:31:56,090 Cached:1035.875 MB
+2020-01-02 11:33:52,160 ==> Task[1]Epoch[7](100/415): Loss: 0.2997
+2020-01-02 11:33:52,161 Allocated:120.65869140625 MB
+2020-01-02 11:33:52,161 Cached:1035.875 MB
+2020-01-02 11:35:45,066 ==> Task[1]Epoch[7](150/415): Loss: 0.2732
+2020-01-02 11:35:45,068 Allocated:121.03369140625 MB
+2020-01-02 11:35:45,068 Cached:1035.875 MB
+2020-01-02 11:37:45,603 ==> Task[1]Epoch[7](200/415): Loss: 0.1819
+2020-01-02 11:37:45,605 Allocated:120.90869140625 MB
+2020-01-02 11:37:45,605 Cached:1035.875 MB
+2020-01-02 11:39:42,845 ==> Task[1]Epoch[7](250/415): Loss: 0.2790
+2020-01-02 11:39:42,847 Allocated:120.65869140625 MB
+2020-01-02 11:39:42,847 Cached:1035.875 MB
+2020-01-02 11:41:42,249 ==> Task[1]Epoch[7](300/415): Loss: 0.2843
+2020-01-02 11:41:42,251 Allocated:121.15869140625 MB
+2020-01-02 11:41:42,251 Cached:1035.875 MB
+2020-01-02 11:43:33,845 ==> Task[1]Epoch[7](350/415): Loss: 0.2962
+2020-01-02 11:43:33,846 Allocated:120.65869140625 MB
+2020-01-02 11:43:33,846 Cached:1035.875 MB
+2020-01-02 11:45:28,765 ==> Task[1]Epoch[7](400/415): Loss: 0.2801
+2020-01-02 11:45:28,766 Allocated:120.65869140625 MB
+2020-01-02 11:45:28,766 Cached:1035.875 MB
+2020-01-02 11:46:01,655 ===> Task 1 Epoch 7 Complete: Avg. Loss: 0.2711
+2020-01-02 11:46:01,656 begin test:
+2020-01-02 11:46:01,657 ====> Extracting Features
+2020-01-02 11:47:10,598 ==> Batch (50/72)
+2020-01-02 11:47:37,446 ====> Building faiss index
+2020-01-02 11:47:37,448 ====> Calculating recall @ N
+2020-01-02 11:47:38,002 ====> Recall@1: 0.5728
+2020-01-02 11:47:38,002 ====> Recall@2: 0.6122
+2020-01-02 11:47:38,003 ====> Recall@3: 0.6290
+2020-01-02 11:47:38,003 ====> Recall@4: 0.6435
+2020-01-02 11:47:38,003 ====> Recall@5: 0.6577
+2020-01-02 11:47:38,003 ====> Recall@10: 0.6948
+2020-01-02 11:47:38,004 ====> Recall@15: 0.7148
+2020-01-02 11:47:38,004 ====> Recall@20: 0.7304
+2020-01-02 11:47:38,004 ====> Recall@25: 0.7458
+2020-01-02 11:47:38,065 ====> Building Cache
+2020-01-02 11:47:38,065 h5feat cache at: /home/annora/NetVLAD/output/train_feat_cache.hdf5
+2020-01-02 11:50:00,446 Allocated:118.65869140625 MB
+2020-01-02 11:50:00,447 Cached:10183.125 MB
+2020-01-02 11:52:29,869 ==> Task[1]Epoch[8](50/415): Loss: 0.2684
+2020-01-02 11:52:29,870 Allocated:121.03369140625 MB
+2020-01-02 11:52:29,870 Cached:1035.875 MB
+2020-01-02 11:54:19,765 ==> Task[1]Epoch[8](100/415): Loss: 0.2981
+2020-01-02 11:54:19,766 Allocated:120.90869140625 MB
+2020-01-02 11:54:19,767 Cached:1035.875 MB
+2020-01-02 11:56:11,994 ==> Task[1]Epoch[8](150/415): Loss: 0.2720
+2020-01-02 11:56:11,995 Allocated:120.65869140625 MB
+2020-01-02 11:56:11,995 Cached:1035.875 MB
+2020-01-02 11:58:09,424 ==> Task[1]Epoch[8](200/415): Loss: 0.1776
+2020-01-02 11:58:09,426 Allocated:121.15869140625 MB
+2020-01-02 11:58:09,426 Cached:1035.875 MB
+2020-01-02 12:00:12,790 ==> Task[1]Epoch[8](250/415): Loss: 0.2782
+2020-01-02 12:00:12,791 Allocated:120.65869140625 MB
+2020-01-02 12:00:12,792 Cached:1035.875 MB
+2020-01-02 12:02:04,498 ==> Task[1]Epoch[8](300/415): Loss: 0.2837
+2020-01-02 12:02:04,499 Allocated:120.65869140625 MB
+2020-01-02 12:02:04,499 Cached:1035.875 MB
+2020-01-02 12:03:54,885 ==> Task[1]Epoch[8](350/415): Loss: 0.2957
+2020-01-02 12:03:54,886 Allocated:122.03369140625 MB
+2020-01-02 12:03:54,886 Cached:1035.875 MB
+2020-01-02 12:05:54,358 ==> Task[1]Epoch[8](400/415): Loss: 0.2789
+2020-01-02 12:05:54,359 Allocated:120.78369140625 MB
+2020-01-02 12:05:54,360 Cached:1035.875 MB
+2020-01-02 12:06:36,255 ===> Task 1 Epoch 8 Complete: Avg. Loss: 0.2698
+2020-01-02 12:06:36,256 begin test:
+2020-01-02 12:06:36,257 ====> Extracting Features
+2020-01-02 12:07:45,961 ==> Batch (50/72)
+2020-01-02 12:08:11,890 ====> Building faiss index
+2020-01-02 12:08:11,892 ====> Calculating recall @ N
+2020-01-02 12:08:12,420 ====> Recall@1: 0.5725
+2020-01-02 12:08:12,420 ====> Recall@2: 0.6119
+2020-01-02 12:08:12,421 ====> Recall@3: 0.6301
+2020-01-02 12:08:12,421 ====> Recall@4: 0.6432
+2020-01-02 12:08:12,421 ====> Recall@5: 0.6554
+2020-01-02 12:08:12,421 ====> Recall@10: 0.6928
+2020-01-02 12:08:12,421 ====> Recall@15: 0.7145
+2020-01-02 12:08:12,422 ====> Recall@20: 0.7290
+2020-01-02 12:08:12,422 ====> Recall@25: 0.7446
+2020-01-02 12:08:12,479 ====> Building Cache
+2020-01-02 12:08:12,479 h5feat cache at: /home/annora/NetVLAD/output/train_feat_cache.hdf5
+2020-01-02 12:10:32,857 Allocated:118.90869140625 MB
+2020-01-02 12:10:32,857 Cached:10183.125 MB
+2020-01-02 12:12:45,101 ==> Task[1]Epoch[9](50/415): Loss: 0.2665
+2020-01-02 12:12:45,103 Allocated:120.65869140625 MB
+2020-01-02 12:12:45,103 Cached:1035.875 MB
+2020-01-02 12:14:34,395 ==> Task[1]Epoch[9](100/415): Loss: 0.2985
+2020-01-02 12:14:34,396 Allocated:121.15869140625 MB
+2020-01-02 12:14:34,397 Cached:1035.875 MB
+2020-01-02 12:16:35,459 ==> Task[1]Epoch[9](150/415): Loss: 0.2709
+2020-01-02 12:16:35,460 Allocated:120.65869140625 MB
+2020-01-02 12:16:35,460 Cached:1035.875 MB
+2020-01-02 12:18:45,790 ==> Task[1]Epoch[9](200/415): Loss: 0.1736
+2020-01-02 12:18:45,791 Allocated:120.65869140625 MB
+2020-01-02 12:18:45,792 Cached:1035.875 MB
+2020-01-02 12:20:40,717 ==> Task[1]Epoch[9](250/415): Loss: 0.2777
+2020-01-02 12:20:40,719 Allocated:122.03369140625 MB
+2020-01-02 12:20:40,719 Cached:1035.875 MB
+2020-01-02 12:22:32,546 ==> Task[1]Epoch[9](300/415): Loss: 0.2838
+2020-01-02 12:22:32,547 Allocated:120.78369140625 MB
+2020-01-02 12:22:32,548 Cached:1035.875 MB
+2020-01-02 12:24:26,745 ==> Task[1]Epoch[9](350/415): Loss: 0.2947
+2020-01-02 12:24:26,746 Allocated:121.03369140625 MB
+2020-01-02 12:24:26,746 Cached:1035.875 MB
+2020-01-02 12:26:26,911 ==> Task[1]Epoch[9](400/415): Loss: 0.2781
+2020-01-02 12:26:26,912 Allocated:121.65869140625 MB
+2020-01-02 12:26:26,912 Cached:1035.875 MB
+2020-01-02 12:27:03,884 ===> Task 1 Epoch 9 Complete: Avg. Loss: 0.2686
+2020-01-02 12:27:03,885 begin test:
+2020-01-02 12:27:03,886 ====> Extracting Features
+2020-01-02 12:28:15,188 ==> Batch (50/72)
+2020-01-02 12:28:40,981 ====> Building faiss index
+2020-01-02 12:28:40,983 ====> Calculating recall @ N
+2020-01-02 12:28:41,517 ====> Recall@1: 0.5716
+2020-01-02 12:28:41,517 ====> Recall@2: 0.6104
+2020-01-02 12:28:41,518 ====> Recall@3: 0.6290
+2020-01-02 12:28:41,518 ====> Recall@4: 0.6438
+2020-01-02 12:28:41,518 ====> Recall@5: 0.6565
+2020-01-02 12:28:41,518 ====> Recall@10: 0.6925
+2020-01-02 12:28:41,519 ====> Recall@15: 0.7130
+2020-01-02 12:28:41,519 ====> Recall@20: 0.7293
+2020-01-02 12:28:41,519 ====> Recall@25: 0.7443
+2020-01-02 12:28:41,581 ====> Building Cache
+2020-01-02 12:28:41,581 h5feat cache at: /home/annora/NetVLAD/output/train_feat_cache.hdf5
+2020-01-02 12:31:02,940 Allocated:119.15869140625 MB
+2020-01-02 12:31:02,941 Cached:10183.125 MB
+2020-01-02 12:33:19,188 ==> Task[1]Epoch[10](50/415): Loss: 0.2652
+2020-01-02 12:33:19,189 Allocated:120.65869140625 MB
+2020-01-02 12:33:19,190 Cached:1035.875 MB
+2020-01-02 12:35:15,988 ==> Task[1]Epoch[10](100/415): Loss: 0.2973
+2020-01-02 12:35:15,990 Allocated:120.65869140625 MB
+2020-01-02 12:35:15,990 Cached:1035.875 MB
+2020-01-02 12:37:23,057 ==> Task[1]Epoch[10](150/415): Loss: 0.2690
+2020-01-02 12:37:23,059 Allocated:122.03369140625 MB
+2020-01-02 12:37:23,059 Cached:1035.875 MB
+2020-01-02 12:39:12,842 ==> Task[1]Epoch[10](200/415): Loss: 0.1720
+2020-01-02 12:39:12,843 Allocated:120.78369140625 MB
+2020-01-02 12:39:12,843 Cached:1035.875 MB
+2020-01-02 12:41:09,470 ==> Task[1]Epoch[10](250/415): Loss: 0.2767
+2020-01-02 12:41:09,471 Allocated:121.03369140625 MB
+2020-01-02 12:41:09,471 Cached:1035.875 MB
+2020-01-02 12:43:01,329 ==> Task[1]Epoch[10](300/415): Loss: 0.2824
+2020-01-02 12:43:01,330 Allocated:121.65869140625 MB
+2020-01-02 12:43:01,331 Cached:1035.875 MB
+2020-01-02 12:44:54,953 ==> Task[1]Epoch[10](350/415): Loss: 0.2957
+2020-01-02 12:44:54,955 Allocated:122.15869140625 MB
+2020-01-02 12:44:54,955 Cached:1035.875 MB
+2020-01-02 12:46:47,628 ==> Task[1]Epoch[10](400/415): Loss: 0.2778
+2020-01-02 12:46:47,630 Allocated:120.78369140625 MB
+2020-01-02 12:46:47,630 Cached:1035.875 MB
+2020-01-02 12:47:20,413 ===> Task 1 Epoch 10 Complete: Avg. Loss: 0.2676
+2020-01-02 12:47:20,414 begin test:
+2020-01-02 12:47:20,415 ====> Extracting Features
+2020-01-02 12:48:31,086 ==> Batch (50/72)
+2020-01-02 12:48:57,712 ====> Building faiss index
+2020-01-02 12:48:57,713 ====> Calculating recall @ N
+2020-01-02 12:48:58,281 ====> Recall@1: 0.5719
+2020-01-02 12:48:58,281 ====> Recall@2: 0.6104
+2020-01-02 12:48:58,282 ====> Recall@3: 0.6287
+2020-01-02 12:48:58,282 ====> Recall@4: 0.6438
+2020-01-02 12:48:58,282 ====> Recall@5: 0.6571
+2020-01-02 12:48:58,282 ====> Recall@10: 0.6928
+2020-01-02 12:48:58,282 ====> Recall@15: 0.7130
+2020-01-02 12:48:58,282 ====> Recall@20: 0.7290
+2020-01-02 12:48:58,282 ====> Recall@25: 0.7435
+2020-01-02 12:48:58,339 ====> Building Cache
+2020-01-02 12:48:58,339 h5feat cache at: /home/annora/NetVLAD/output/train_feat_cache.hdf5
+2020-01-02 12:51:19,158 Allocated:118.65869140625 MB
+2020-01-02 12:51:19,158 Cached:10183.125 MB
+2020-01-02 12:53:35,094 ==> Task[1]Epoch[11](50/415): Loss: 0.2652
+2020-01-02 12:53:35,096 Allocated:122.03369140625 MB
+2020-01-02 12:53:35,096 Cached:1035.875 MB
+2020-01-02 12:55:50,503 ==> Task[1]Epoch[11](100/415): Loss: 0.2976
+2020-01-02 12:55:50,505 Allocated:120.78369140625 MB
+2020-01-02 12:55:50,511 Cached:1035.875 MB
+2020-01-02 12:59:36,391 ==> Task[1]Epoch[11](150/415): Loss: 0.2688
+2020-01-02 12:59:36,392 Allocated:121.03369140625 MB
+2020-01-02 12:59:36,392 Cached:1035.875 MB
+2020-01-02 13:01:30,837 ==> Task[1]Epoch[11](200/415): Loss: 0.1695
+2020-01-02 13:01:30,838 Allocated:121.65869140625 MB
+2020-01-02 13:01:30,839 Cached:1035.875 MB
+2020-01-02 13:03:23,746 ==> Task[1]Epoch[11](250/415): Loss: 0.2772
+2020-01-02 13:03:23,748 Allocated:122.15869140625 MB
+2020-01-02 13:03:23,748 Cached:1035.875 MB
+2020-01-02 13:05:16,907 ==> Task[1]Epoch[11](300/415): Loss: 0.2816
+2020-01-02 13:05:16,909 Allocated:120.78369140625 MB
+2020-01-02 13:05:16,909 Cached:1035.875 MB
+2020-01-02 13:07:37,899 ==> Task[1]Epoch[11](350/415): Loss: 0.2948
+2020-01-02 13:07:37,901 Allocated:122.15869140625 MB
+2020-01-02 13:07:37,903 Cached:1035.875 MB
+2020-01-02 13:10:44,355 ==> Task[1]Epoch[11](400/415): Loss: 0.2769
+2020-01-02 13:10:44,361 Allocated:121.65869140625 MB
+2020-01-02 13:10:44,365 Cached:1035.875 MB
+2020-01-02 13:11:19,736 ===> Task 1 Epoch 11 Complete: Avg. Loss: 0.2670
+2020-01-02 13:11:19,737 begin test:
+2020-01-02 13:11:19,738 ====> Extracting Features
+2020-01-02 13:12:29,326 ==> Batch (50/72)
+2020-01-02 13:12:55,505 ====> Building faiss index
+2020-01-02 13:12:55,506 ====> Calculating recall @ N
+2020-01-02 13:12:56,011 ====> Recall@1: 0.5725
+2020-01-02 13:12:56,011 ====> Recall@2: 0.6099
+2020-01-02 13:12:56,012 ====> Recall@3: 0.6284
+2020-01-02 13:12:56,012 ====> Recall@4: 0.6449
+2020-01-02 13:12:56,012 ====> Recall@5: 0.6568
+2020-01-02 13:12:56,012 ====> Recall@10: 0.6922
+2020-01-02 13:12:56,012 ====> Recall@15: 0.7113
+2020-01-02 13:12:56,013 ====> Recall@20: 0.7272
+2020-01-02 13:12:56,013 ====> Recall@25: 0.7429
+2020-01-02 13:12:56,069 ====> Building Cache
+2020-01-02 13:12:56,070 h5feat cache at: /home/annora/NetVLAD/output/train_feat_cache.hdf5
+2020-01-02 13:15:16,301 Allocated:118.78369140625 MB
+2020-01-02 13:15:16,302 Cached:10183.125 MB
+2020-01-02 13:17:34,985 ==> Task[1]Epoch[12](50/415): Loss: 0.2632
+2020-01-02 13:17:34,987 Allocated:121.03369140625 MB
+2020-01-02 13:17:34,987 Cached:1035.875 MB
+2020-01-02 13:19:30,889 ==> Task[1]Epoch[12](100/415): Loss: 0.2985
+2020-01-02 13:19:30,890 Allocated:121.65869140625 MB
+2020-01-02 13:19:30,890 Cached:1035.875 MB
+2020-01-02 13:21:30,810 ==> Task[1]Epoch[12](150/415): Loss: 0.2689
+2020-01-02 13:21:30,812 Allocated:122.15869140625 MB
+2020-01-02 13:21:30,812 Cached:1035.875 MB
+2020-01-02 13:23:21,456 ==> Task[1]Epoch[12](200/415): Loss: 0.1686
+2020-01-02 13:23:21,462 Allocated:120.78369140625 MB
+2020-01-02 13:23:21,463 Cached:1035.875 MB
+2020-01-02 13:25:20,530 ==> Task[1]Epoch[12](250/415): Loss: 0.2757
+2020-01-02 13:25:20,531 Allocated:122.15869140625 MB
+2020-01-02 13:25:20,531 Cached:1035.875 MB
+2020-01-02 13:27:14,139 ==> Task[1]Epoch[12](300/415): Loss: 0.2811
+2020-01-02 13:27:14,140 Allocated:121.65869140625 MB
+2020-01-02 13:27:14,140 Cached:1035.875 MB
+2020-01-02 13:29:07,208 ==> Task[1]Epoch[12](350/415): Loss: 0.2940
+2020-01-02 13:29:07,209 Allocated:121.65869140625 MB
+2020-01-02 13:29:07,209 Cached:1035.875 MB
+2020-01-02 13:31:00,718 ==> Task[1]Epoch[12](400/415): Loss: 0.2774
+2020-01-02 13:31:00,719 Allocated:121.65869140625 MB
+2020-01-02 13:31:00,720 Cached:1035.875 MB
+2020-01-02 13:31:33,636 ===> Task 1 Epoch 12 Complete: Avg. Loss: 0.2664
+2020-01-02 13:31:33,637 begin test:
+2020-01-02 13:31:33,638 ====> Extracting Features
+2020-01-02 13:32:48,720 ==> Batch (50/72)
+2020-01-02 13:33:15,033 ====> Building faiss index
+2020-01-02 13:33:15,035 ====> Calculating recall @ N
+2020-01-02 13:33:15,598 ====> Recall@1: 0.5722
+2020-01-02 13:33:15,598 ====> Recall@2: 0.6096
+2020-01-02 13:33:15,599 ====> Recall@3: 0.6284
+2020-01-02 13:33:15,599 ====> Recall@4: 0.6446
+2020-01-02 13:33:15,599 ====> Recall@5: 0.6554
+2020-01-02 13:33:15,599 ====> Recall@10: 0.6919
+2020-01-02 13:33:15,599 ====> Recall@15: 0.7107
+2020-01-02 13:33:15,599 ====> Recall@20: 0.7270
+2020-01-02 13:33:15,600 ====> Recall@25: 0.7423
+2020-01-02 13:33:15,661 ====> Building Cache
+2020-01-02 13:33:15,661 h5feat cache at: /home/annora/NetVLAD/output/train_feat_cache.hdf5
+2020-01-02 13:35:36,392 Allocated:119.65869140625 MB
+2020-01-02 13:35:36,392 Cached:10183.125 MB
+2020-01-02 13:37:05,052 Traceback (most recent call last):
+  File "/home/annora/anaconda3/envs/pytorch_netvlad/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 138, in _worker_loop
+    samples = collate_fn([dataset[i] for i in batch_indices])
+  File "/home/annora/anaconda3/envs/pytorch_netvlad/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 138, in <listcomp>
+    samples = collate_fn([dataset[i] for i in batch_indices])
+  File "/home/annora/anaconda3/envs/pytorch_netvlad/lib/python3.6/site-packages/torch/utils/data/dataset.py", line 103, in __getitem__
+    return self.dataset[self.indices[idx]]
+  File "/home/annora/pytorch-NetVlad/OxfordRobotCar.py", line 215, in __getitem__
+    with h5py.File(self.cache, mode='r') as h5:
+  File "/home/annora/anaconda3/envs/pytorch_netvlad/lib/python3.6/site-packages/h5py/_hl/files.py", line 394, in __init__
+    swmr=swmr)
+  File "/home/annora/anaconda3/envs/pytorch_netvlad/lib/python3.6/site-packages/h5py/_hl/files.py", line 170, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 85, in h5py.h5f.open
+OSError: Unable to open file (unable to lock file, errno = 11, error message = 'Resource temporarily unavailable')
+Traceback (most recent call last):
+  File "rawlearning.py", line 956, in <module>
+    train(epoch, t)
+  File "rawlearning.py", line 174, in train
+    negCounts, indices) in enumerate(training_data_loader, startIter):
+  File "/home/annora/anaconda3/envs/pytorch_netvlad/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 637, in __next__
+    return self._process_next_batch(batch)
+  File "/home/annora/anaconda3/envs/pytorch_netvlad/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 658, in _process_next_batch
+    raise batch.exc_type(batch.exc_msg)
+OSError: Traceback (most recent call last):
+  File "/home/annora/anaconda3/envs/pytorch_netvlad/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 138, in _worker_loop
+    samples = collate_fn([dataset[i] for i in batch_indices])
+  File "/home/annora/anaconda3/envs/pytorch_netvlad/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 138, in <listcomp>
+    samples = collate_fn([dataset[i] for i in batch_indices])
+  File "/home/annora/anaconda3/envs/pytorch_netvlad/lib/python3.6/site-packages/torch/utils/data/dataset.py", line 103, in __getitem__
+    return self.dataset[self.indices[idx]]
+  File "/home/annora/pytorch-NetVlad/OxfordRobotCar.py", line 215, in __getitem__
+    with h5py.File(self.cache, mode='r') as h5:
+  File "/home/annora/anaconda3/envs/pytorch_netvlad/lib/python3.6/site-packages/h5py/_hl/files.py", line 394, in __init__
+    swmr=swmr)
+  File "/home/annora/anaconda3/envs/pytorch_netvlad/lib/python3.6/site-packages/h5py/_hl/files.py", line 170, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 85, in h5py.h5f.open
+OSError: Unable to open file (unable to lock file, errno = 11, error message = 'Resource temporarily unavailable')
+

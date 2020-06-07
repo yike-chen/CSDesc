@@ -1,0 +1,27 @@
+2020-02-10 10:23:40,252 Namespace(arch='alexnet', batchSize=12, cacheBatchSize=96, cachePath='/home/annora/NetVLAD/output/', cacheRefreshRate=3000, ckpt='best', contilearn=True, dataPath='/home/annora/NetVLAD/output/data/', dataset='robotcar', evalEvery=1, fromscratch=False, fromtask='/home/annora/NetVLAD/output/runs/2020-01-12-23-53-56_alexnet_max', lr=0.0001, lrGamma=0.5, lrStep=5.0, margin=0.1, mode='train', momentum=0.9, nEpochs=100, nGPU=1, nocuda=False, num_clusters=64, optim='SGD', patience=10, pooling='max', premodel='imagenet', resume='', runsPath='/home/annora/NetVLAD/output/runs/', savePath='checkpoints', seed=123, split='val', start_epoch=0, threads=8, vladv2=False, weightDecay=0.001)
+2020-02-10 10:23:40,334 ===> Loading dataset(s)
+2020-02-10 10:23:40,334 trainfile ------>>>>>> pitts30k_train.mat
+2020-02-10 10:23:40,335 [Errno 2] No such file or directory: '/home/annora/OxfordRobotCar/datasets_mat/pitts30k_train.mat'
+Traceback (most recent call last):
+  File "/home/annora/anaconda3/envs/pytorch_netvlad/lib/python3.6/site-packages/scipy/io/matlab/mio.py", line 33, in _open_file
+    return open(file_like, 'rb'), True
+FileNotFoundError: [Errno 2] No such file or directory: '/home/annora/OxfordRobotCar/datasets_mat/pitts30k_train.mat'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "rawlearning_vlad.py", line 508, in <module>
+    whole_train_set = dataset.get_whole_training_set(matfile=trainfile)
+  File "/home/annora/pytorch-NetVlad/OxfordRobotCar.py", line 48, in get_whole_training_set
+    onlyDB=onlyDB)
+  File "/home/annora/pytorch-NetVlad/OxfordRobotCar.py", line 109, in __init__
+    self.dbStruct = parse_dbStruct(structFile)
+  File "/home/annora/pytorch-NetVlad/OxfordRobotCar.py", line 76, in parse_dbStruct
+    mat = loadmat(path)
+  File "/home/annora/anaconda3/envs/pytorch_netvlad/lib/python3.6/site-packages/scipy/io/matlab/mio.py", line 141, in loadmat
+    MR, file_opened = mat_reader_factory(file_name, appendmat, **kwargs)
+  File "/home/annora/anaconda3/envs/pytorch_netvlad/lib/python3.6/site-packages/scipy/io/matlab/mio.py", line 64, in mat_reader_factory
+    byte_stream, file_opened = _open_file(file_name, appendmat)
+  File "/home/annora/anaconda3/envs/pytorch_netvlad/lib/python3.6/site-packages/scipy/io/matlab/mio.py", line 39, in _open_file
+    return open(file_like, 'rb'), True
+FileNotFoundError: [Errno 2] No such file or directory: '/home/annora/OxfordRobotCar/datasets_mat/pitts30k_train.mat'
